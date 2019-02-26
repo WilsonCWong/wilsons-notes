@@ -8,10 +8,10 @@ A compilation of all my notes for the various subjects and topics I've learned.
   - [Frameworks](#frameworks)
     - [Gatsby](#gatsby)
 - [Game Development](#game-development)
-  - [Libraries](#libraries-1)
+  - [Unity](#unity)
 - [Mathematics](#mathematics)
 
-
+---
 ### Web Development
 
 #### Libraries
@@ -28,13 +28,17 @@ A compilation of all my notes for the various subjects and topics I've learned.
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
 
+---
 ### Game Development
-#### Libraries
+#### Unity
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
 
+---
 ### Mathematics
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
+
+---
