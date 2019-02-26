@@ -5,6 +5,8 @@ A compilation of all my notes for the various subjects and topics I've learned.
 - [Web Development](#web-development)
   - [Libraries](#libraries)
     - [React](#react)
+  - [Frameworks](#frameworks)
+    - [Gatsby](#gatsby)
 - [Game Development](#game-development)
   - [Libraries](#libraries-1)
 - [Mathematics](#mathematics)
@@ -14,7 +16,14 @@ A compilation of all my notes for the various subjects and topics I've learned.
 
 #### Libraries
 ##### React
-- [Hooks](web-development/react/Hooks.md)
+> A library for building user interfaces.
+- [Hooks](web-development/libraries/react/Hooks.md)
+
+
+#### Frameworks
+##### Gatsby
+> A static site generator utilizing React.
+- [Getting Started](web-development/frameworks/gatsby/GettingStarted.md)
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
