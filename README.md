@@ -11,11 +11,21 @@ A compilation of all my notes for the various subjects and topics I've learned.
 
 
 ### Web Development
+
 #### Libraries
 ##### React
 - [Hooks](web-development/react/Hooks.md)
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
 
 ### Game Development
 #### Libraries
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
 
 ### Mathematics
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
