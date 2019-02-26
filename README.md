@@ -25,20 +25,20 @@ A compilation of all my notes for the various subjects and topics I've learned.
 > A static site generator utilizing React.
 - [Getting Started](web-development/frameworks/gatsby/GettingStarted.md)
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#table-of-contents-">↥ back to top</a></b>
 </div>
 
 ---
 ### Game Development
 #### Unity
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#table-of-contents-">↥ back to top</a></b>
 </div>
 
 ---
 ### Mathematics
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#table-of-contents-">↥ back to top</a></b>
 </div>
 
 ---
