@@ -1,4 +1,4 @@
-# wilsons-notes<!-- omit in toc -->
+# Wilson's Notes<!-- omit in toc -->
 A compilation of all my notes for the various subjects and topics I've learned.
 
 ## Table of Contents<!-- omit in toc -->
