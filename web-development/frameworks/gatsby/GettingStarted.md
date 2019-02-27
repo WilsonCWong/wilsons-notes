@@ -82,7 +82,8 @@ If you just want a stylesheet that applies for all components, you can do this b
 CSS modules provide a more modular approach to styling components.
 
 **Example**
-To use CSS modules, you need a component and an accompany CSS file with the same name that ends with `*.module.css`.
+
+To use CSS modules, you need a component and an accompanying CSS file with the same name that ends with `*.module.css`.
 
 ```
 └───src/
