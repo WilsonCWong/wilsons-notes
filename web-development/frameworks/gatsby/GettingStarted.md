@@ -11,6 +11,9 @@
   - [Styling](#styling)
     - [Global Styles](#global-styles)
       - [Shared Layout Component](#shared-layout-component)
+      - [CSS-in-JS](#css-in-js)
+      - [Global Styles without Shared Layout Components](#global-styles-without-shared-layout-components)
+    - [CSS Modules](#css-modules)
 
 
 ## Introduction
@@ -42,11 +45,11 @@ Gatsby has four unique files that can be used to customize Gatsby and utilize th
 - `gatsby-ssr.js` - Use the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) here if you're using SSR and need to make customizations.
 
 ### Styling
-There are many ways to style your application with Gatsby (It is React after all!).
+There are many ways to style your components with Gatsby (It is React after all!). Below are an example of some ways to approach it.
 #### Global Styles
 Styles can be applied through a global style sheet. There are three approaches that can be used.
 ##### Shared Layout Component
-Layout components are essentially reusable parts for common elements on your site. You can use this with a standard CSS file to style your components.
+Shared layout components are essentially reusable parts for common elements on your site. You can use this with a standard CSS file to style your components.
 
 Create a layout component and an accompanying CSS file like below:
 ```
@@ -55,7 +58,7 @@ Create a layout component and an accompanying CSS file like below:
       │   │─  MyComponent.js
       │   └─  MyComponent.css
 ```
-> You can also separate out `MyComponent` to a separate folder within the `component` folder and have a `styles.css` and `index.js` (which will export the component) instead. This is how many React libraries and applications structure it.
+> You can also separate out `MyComponent` to a separate folder within the `component` folder that contains `MyComponent.js`, `styles.css`, and `index.js` (which will export the component) instead. This is how many React libraries and applications structure it.
 
 Fill the `MyComponent.css` file with some styles and import it into the `MyComponent` component:
 ```jsx
@@ -66,6 +69,47 @@ export default ({ children }) => <div>{children}</div>
 ```
 
 The component can now be used in a page and the global styles will be applied.
+
+##### CSS-in-JS
+CSS-in-JS can be used via plugins in Gatsby. Install your library of choice using npm and include it as a plugin using your `gatsby.config.js` file. 
+
+Follow the instructions of whichever plugin you're integrating. Some plugins include [Emotion](https://www.gatsbyjs.org/docs/emotion) and [Styled Components](https://www.gatsbyjs.org/docs/styled-components/).
+
+##### Global Styles without Shared Layout Components
+If you just want a stylesheet that applies for all components, you can do this by importing/requiring the stylesheet from `gatsby-browser.js`. This will not work for CSS-in-JS (Use shared layout components or a `global-styles.js`).
+
+#### CSS Modules
+CSS modules provide a more modular approach to styling components.
+
+**Example**
+To use CSS modules, you need a component and an accompany CSS file with the same name that ends with `*.module.css`.
+
+```
+└───src/
+      └───pages/
+      │   │─  MyComponent.js
+      │   └─  MyComponent.module.css
+```
+Import the stylesheet into your component to use it. However, this part is slightly different. CSS modules actually import an object with all the classes of your CSS file as keys. These are guaranteed to be unique. You can use them like so:
+```css
+/* MyComponent.module.css */
+.ugly {
+  font-size: 14px;
+  color: pink;
+  background-color: green;
+}
+```
+```jsx
+// MyComponent.js
+import React from 'react';
+import styles from './MyComponent.module.css';
+
+export default () => (
+  <div>
+    <p className={styles.ugly}>This is some ugly text</p>
+  </div>
+)
+```
 
 <div align="right">
     <b><a href="#top">↥ back to top</a></b>
