@@ -14,6 +14,9 @@
       - [CSS-in-JS](#css-in-js)
       - [Global Styles without Shared Layout Components](#global-styles-without-shared-layout-components)
     - [CSS Modules](#css-modules)
+- [Working with Data](#working-with-data)
+  - [Without GraphQL](#without-graphql)
+  - [Querying Data with GraphQL](#querying-data-with-graphql)
 
 
 ## Introduction
@@ -111,6 +114,48 @@ export default () => (
   </div>
 )
 ```
+
+## Working with Data
+For the most part, data is pulled into a Gatsby site using source plugins. However, it is possible to use unstructured data directly without transforming it into Gatsby nodes.
+### Without GraphQL
+To supply data to Gatsby without GraphQL, the `createPages` API can be used. First fetch the data needed, then pass it to the `createPage` action in the `createPages` API via `context`. Since this is a Gatsby Node API, put it into `gatsby-node.js`.
+
+```jsx
+//gatsby-node.js
+exports.createPages = async ({ actions: { createPage } }) => {
+  // Fetch the wrestler data
+  const allWrestlers = await getWrestlerData();
+
+  // Create a page for each wrestler
+  allWrestlers.forEach(wrestler => {
+    createPage({
+      path: `/wrestler/${wrestler.name}`,
+      component: require.resolve("./src/templates/wrestlers.js"),
+      context: { wrestler },
+    });
+  });
+}
+```
+
+The data can then be accessed as props in the page(s).
+
+```jsx
+// wrestlers.js
+export default ({ pageContext: { wrestler } }) => (
+  <div>
+    <h1>{ wrestler.name }</h1>
+    <p>Weight: { wrestler.weight }</p>
+    <p>Finisher: { wrestler.finisher }</p>
+  </div>
+)
+```
+
+The advantages of using this approach is familiarity and the elimination of another layer for fetching data. However, this completely eliminates some of the great functionality of Gatsby such as transformer plugins and performance optimizations, just to name a few. **This approach should only be used for small projects**.
+
+### Querying Data with GraphQL
+Gatsby's data layer, powered by GraphQL, enables you to build sites from data sources of all kinds such as Markdown, WordPress, headless CMS', and more.
+
+"Data" in Gatsby can thought of as the things that live outside a React Component. So you can say this data is stored *outside* the component and you *pull* data into the component as needed. GraphQL is the puller in this case.
 
 <div align="right">
     <b><a href="#top">↥ back to top</a></b>
