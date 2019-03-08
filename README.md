@@ -6,6 +6,7 @@ A compilation of all my notes for the various subjects and topics I've learned.
   - [Libraries](#libraries)
     - [React](#react)
   - [Frameworks](#frameworks)
+    - [Jest](#jest)
     - [Gatsby](#gatsby)
 - [Game Development](#game-development)
   - [Unity](#unity)
@@ -16,11 +17,16 @@ A compilation of all my notes for the various subjects and topics I've learned.
 
 #### Libraries
 ##### React
-> A library for building user interfaces.
+> A web library for building user interfaces.
 - [Hooks](web-development/libraries/react/Hooks.md)
 
 
 #### Frameworks
+
+##### Jest
+> A JavaScript testing framework.
+- [Introduction to Jest](web-development/frameworks/jest/IntroToJest.md)
+
 ##### Gatsby
 > A static site generator utilizing React.
 - [Getting Started](web-development/frameworks/gatsby/GettingStarted.md)
