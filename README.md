@@ -1,5 +1,5 @@
 # Wilson's Notes<!-- omit in toc -->
-A compilation of all my notes for the various subjects and topics I've learned.
+A compilation of all my personal notes that I took for the various subjects and topics I've learned or am learning.
 
 ## Table of Contents<!-- omit in toc -->
 - [Web Development](#web-development)
@@ -11,6 +11,8 @@ A compilation of all my notes for the various subjects and topics I've learned.
 - [Game Development](#game-development)
   - [Unity](#unity)
 - [Mathematics](#mathematics)
+- [Music](#music)
+  - [Fundamentals](#fundamentals)
 
 ---
 ### Web Development
@@ -48,3 +50,10 @@ A compilation of all my notes for the various subjects and topics I've learned.
 </div>
 
 ---
+### Music
+#### Fundamentals
+> All about synthesizers.
+- [Synthesizers](music/synthesizers.md)
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
