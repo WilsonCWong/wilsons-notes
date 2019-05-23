@@ -7,10 +7,10 @@
   - [Subtractive Synthesis](#subtractive-synthesis)
   - [Additive Synthesis](#additive-synthesis)
   - [FM (Frequency Modulation)](#fm-frequency-modulation)
-- [S & S (Sample & synthesis)](#s--s-sample--synthesis)
-- [Wavetable, Wave Sequencing & Vector Synthesis](#wavetable-wave-sequencing--vector-synthesis)
-- [Phase Distortion](#phase-distortion)
-- [Physical Modeling / Soft Synthesis / Virtual Synthesis](#physical-modeling--soft-synthesis--virtual-synthesis)
+  - [S & S (Sample & synthesis)](#s--s-sample--synthesis)
+  - [Wavetable, Wave Sequencing & Vector Synthesis](#wavetable-wave-sequencing--vector-synthesis)
+  - [Phase Distortion](#phase-distortion)
+  - [Physical Modeling / Soft Synthesis / Virtual Synthesis](#physical-modeling--soft-synthesis--virtual-synthesis)
 - [References](#references)
 
 
@@ -49,18 +49,18 @@ Frequency modulation is similar to additive synthesis, in that it uses 6 sine wa
 
 The difference ends there though, because instead of combining the sine waves, the output of one operator is set to modulate or "wobble" to the next, which goes on in a chain until a complex waveform is produced by the final oscillator, called the Output Operator.
 
-## S & S (Sample & synthesis)
+### S & S (Sample & synthesis)
 S & S synthesis uses pre-recorded samples as its sound source. It's best suited for creating sounds by combining samples of real instruments with samples created from other forms of synthesis.
 
-## Wavetable, Wave Sequencing & Vector Synthesis
+### Wavetable, Wave Sequencing & Vector Synthesis
 This form of synthesis is ideal for slow pad-like and rhythmical evolving sounds. The basic concept is that it sequentially cycles through (wave sequencing) or morphing between (vector synthesis) a number of waveforms overtime. These waveforms are digitally stored in a "wave table" and may be samples or digital "models".
 
-## Phase Distortion
+### Phase Distortion
 Phase distortion uses an algorithm to create a sine wave, then a second algorithm to distort the shape of the sine wave to create a new waveform.
 
 It is best used with other forms of synthesis, such as FM, where creating variations of sine waves is useful for creating new tones.
 
-## Physical Modeling / Soft Synthesis / Virtual Synthesis
+### Physical Modeling / Soft Synthesis / Virtual Synthesis
 Utilizes powerful digital signal processors (DSPs) and high quality digital to analog conveters (D.A.Cs). The software version is called a soft synth or plug-in.
 
 When a note is triggered, the DSP mathematically calculates in real time the stream of digital data required to create the sound it will output through the D.A.Cs.
